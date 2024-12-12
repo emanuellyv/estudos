@@ -1,21 +1,21 @@
 # estudos
-
-| Propriedade<br>                   | Descrição<br>                                                                                                               | Obrigatório<br>    | Condição<br>                                                                                                                                       | Tipo<br>        |
-|-----------------------------------|-----------------------------------------------------------------------------------------------------------------------------|--------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|
-| type<br>                          | Tipo do boleto, indicando se é um modelo comum (apenas código de barras) ou híbrido (código de barras e qrcode pix).<br>    | Sim<br>            |  O valor deve ser "common" ou "hybrid".<br>                                                                                                        |  String<br>     |
-| amount<br>                        | Valor do boleto.<br>                                                                                                        | Sim<br>            |  O valor deve ser maior que 0.<br>                                                                                                                 |  Inteiro<br>    |
-| expires_at<br>                    |  Data de vencimento do boleto.<br>                                                                                          | Sim.<br>           |  Deverá possuir o formato de data "YYYY-MM-DD", ser superior ou igual a data de hoje e estar entre o primeiro e vigésimo quinto dia do mês.<br>    | Date<br>        |
-| fees<br>                          |  Juros do Boleto.<br>                                                                                                       | Sim.<br>           |  O valor deve ser maior que 0.<br>                                                                                                                 | Inteiro<br>     |
-| fine<br>                          |  Multa diária.<br>                                                                                                          | Sim.<br>           |  O valor deve ser maior que 0.<br>                                                                                                                 | Inteiro<br>     |
-| payer<br>                         |  Pagador do Boleto.<br>                                                                                                     | Sim.<br>           | <br>                                                                                                                                               | Objeto<br>      |
-| payer.name<br>                    |  Nome do pagador.<br>                                                                                                       | Sim.<br>           | <br>                                                                                                                                               | string<br>      |
-| payer.document<br>                |  Cpf ou Cnpj do pagador.<br>                                                                                                | Sim.<br>           | <br>                                                                                                                                               | string<br>      |
-| payer.address_zipcode<br>         |  CEP do pagador.<br>                                                                                                        | Sim.<br>           | <br>                                                                                                                                               | string<br>      |
-| payer.address_city<br>            |  Cidade do pagador.<br>                                                                                                     | Sim.<br>           | <br>                                                                                                                                               | string<br>      |
-| payer.address_neighborhood<br>    |  Bairro do pagador.<br>                                                                                                     | Sim.<br>           | <br>                                                                                                                                               | string<br>      |
-| payer.address<br>                 |  Rua do pagador.<br>                                                                                                        | Sim.<br>           | <br>                                                                                                                                               | string<br>      |
-| payer.address_state<br>           |  Estado do pagador.<br>                                                                                                     | Sim.<br>           | <br>                                                                                                                                               | string<br>      |
-| payer.address_number<br>          |  Número do pagador.<br>                                                                                                     | Sim.<br>           | <br>                                                                                                                                               | string<br>      |
-| payer.address_complement<br>      |  Complemento do endereço do pagador.<br>                                                                                    | Não.<br>           | <br>                                                                                                                                               | string<br>      |
-| payer.email<br>                   |  Email do pagador.<br>                                                                                                      | Não.<br>           | <br>                                                                                                                                               | string<br>      |
-| payer.phone<br>                   |  Telefone do pagador.<br>                                                                                                   | Não.<br>           | <br>                                                                                                                                               | string<br>      |
+|     |     |     |     |     |
+| --- | --- | --- | --- | --- |
+| **Propriedade** | **Descrição** | **Obrigatório** | **Condição** | **Tipo** |
+| type | Tipo do boleto, indicando se é um modelo comum (apenas código de barras) ou híbrido (código de barras e qrcode pix). | Sim | O valor deve ser "common" ou "hybrid". | String |
+| amount | Valor do boleto. | Sim | O valor deve ser maior que 0. | Inteiro |
+| expires\_at | Data de vencimento do boleto. | Sim. | Deverá possuir o formato de data "YYYY-MM-DD", ser superior ou igual a data de hoje e estar entre o primeiro e vigésimo quinto dia do mês. | Date |
+| fees | Juros do Boleto. | Sim. | O valor deve ser maior que 0. | Inteiro |
+| fine | Multa diária. | Sim. | O valor deve ser maior que 0. | Inteiro |
+| payer | Pagador do Boleto. | Sim. |     | Objeto |
+| payer.name | Nome do pagador. | Sim. |     | string |
+| payer.document | Cpf ou Cnpj do pagador. | Sim. |     | string |
+| payer.address\_zipcode | CEP do pagador. | Sim. |     | string |
+| payer.address\_city | Cidade do pagador. | Sim. |     | string |
+| payer.address\_neighborhood | Bairro do pagador. | Sim. |     | string |
+| payer.address | Rua do pagador. | Sim. |     | string |
+| payer.address\_state | Estado do pagador. | Sim. |     | string |
+| payer.address\_number | Número do pagador. | Sim. |     | string |
+| payer.address\_complement | Complemento do endereço do pagador. | Não. |     | string |
+| payer.email | Email do pagador. | Não. |     | string |
+| payer.phone | Telefone do pagador. | Não. |     | string |
