@@ -1,9 +1,15 @@
 <?php
 
-class Titulo
-{
-    private array $notas;
+namespace ScreenMatch\Modelo;
 
+/* 
+Classes abstratas podem ter métodos abstratos (duracaoEmMinutos)
+	- Se tiver um método abstrato, as classes que extenderem a classe mãe, *precisam* ter o método
+	- Não é possível instanciar classes abstratas
+*/
+abstract class Titulo implements Avaliavel
+{
+	use ComAvaliacao;
     /* 	
 		Definir um modificador de acesso (private/public) para um parâmetro no método __construct,
 		o parâmetro se torna uma propriedade da classe, ou seja, o parâmetro é automaticamente inicializado
@@ -16,24 +22,7 @@ class Titulo
 		public readonly int $anoLancamento,
 		public readonly Genero $genero,
 	) {
-		$this->notas = [];
 	}
 
-	public function avaliar(float $nota): void
-	{
-		$this->notas[] = $nota;
-	}
-
-	public function calcularMedia(): float
-	{
-		$somaNotas = array_sum($this->notas);
-		$quantidadeNotas = count($this->notas);
-
-		return $somaNotas / $quantidadeNotas;
-	}
-
-    public function duracaoEmMinutos(): int
-    {
-        return 0;
-    }
+	abstract public function duracaoEmMinutos(): int;
 }
