@@ -79,5 +79,3 @@ var_dump($alunos2024);
  * array_shift => remove e retorna o 1º elemento
  * array_pop => remove e retorna o último elemento
  */
-
-teste

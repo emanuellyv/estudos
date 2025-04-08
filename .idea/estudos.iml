@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="WEB_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/aprenda-programar-php-com-orientacao-a-objetos/conheca-a-programacao-orientada-a-objetos/screen-match/src" isTestSource="false" packagePrefix="ScreenMatch" />
+      <sourceFolder url="file://$MODULE_DIR$/laravel-crie-aplicacoes-web-em-php/criando-aplicacao-mvc/controle-series" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
