@@ -1,5 +1,7 @@
 <?php
 
+namespace Curso\Banco\Modelo;
+
 class Endereco
 {
     private string $cidade;

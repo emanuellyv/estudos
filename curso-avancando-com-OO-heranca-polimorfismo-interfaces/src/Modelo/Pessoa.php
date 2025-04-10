@@ -1,5 +1,7 @@
 <?php
 
+namespace Curso\Banco\Modelo;
+
 class Pessoa
 {
     protected string $nome;
