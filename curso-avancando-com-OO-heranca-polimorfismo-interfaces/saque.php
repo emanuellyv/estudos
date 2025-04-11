@@ -1,14 +1,11 @@
 <?php
 
-use Curso\Banco\Modelo\Conta\Conta;
-use Curso\Banco\Modelo\Conta\ContaPoupanca;
-use Curso\Banco\Modelo\Conta\Titular;
-use Curso\Banco\Modelo\CPF;
-use Curso\Banco\Modelo\Endereco;
+use Curso\Banco\Modelo\Conta\Conta\{ContaPoupanca, ContaCorrente, Titular};
+use Curso\Banco\Modelo\{CPF, Endereco};
 
 require_once 'autoload.php';
 
-$conta = new Conta(
+$conta = new ContaCorrente(
     new Titular(
         new CPF('123.456.789-00'),
         'Emanuelly',

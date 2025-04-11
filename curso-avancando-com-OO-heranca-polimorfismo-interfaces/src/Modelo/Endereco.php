@@ -9,12 +9,6 @@ class Endereco
     private string $rua;
     private string $numero;
 
-    /**
-     * @param string $cidade
-     * @param string $bairro
-     * @param string $rua
-     * @param string $numero
-     */
     public function __construct(string $cidade, string $bairro, string $rua, string $numero)
     {
         $this->cidade = $cidade;
@@ -43,5 +37,8 @@ class Endereco
         return $this->numero;
     }
 
-
+    public function __toString(): string
+    {
+        return "{$this->rua}, {$this->numero}, {$this->bairro}, {$this->cidade}";
+    }
 }
