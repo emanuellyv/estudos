@@ -2,8 +2,18 @@
 
 namespace Curso\Banco\Modelo;
 
-class Endereco
+/**
+ * Class Endereco
+ * @package Curso\Banco\Modelo
+ * @property-read string $cidade
+ * @property-read string $bairro
+ * @property-read string $rua
+ * @property-read string $numero
+ */
+final class Endereco
 {
+    use AcessoPropriedades;
+
     private string $cidade;
     private string $bairro;
     private string $rua;
@@ -17,7 +27,7 @@ class Endereco
         $this->numero = $numero;
     }
 
-    public function recupaCidade(): string
+    public function recuperaCidade(): string
     {
         return $this->cidade;
     }
