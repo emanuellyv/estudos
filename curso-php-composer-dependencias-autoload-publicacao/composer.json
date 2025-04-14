@@ -14,7 +14,9 @@
         "symfony/css-selector": "^7.2"
     },
     "autoload": {
-        "files": ["./functions.php"],
+        "files": [
+            "./functions.php"
+        ],
         "psr-4": {
             "Cursos\\BuscadorDeCursos\\": "src/"
         }
@@ -35,5 +37,6 @@
     },
     "scripts-descriptions": {
         "check": "Roda as verificações do código > PHAN e PHPCS"
-    }
+    },
+    "bin": [ "buscar-cursos.php"]
 }
