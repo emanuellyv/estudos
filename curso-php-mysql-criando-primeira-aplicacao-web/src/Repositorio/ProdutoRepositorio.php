@@ -14,7 +14,7 @@ class ProdutoRepositorio
         $this->pdo = $pdo;
     }
 
-    public function formarObejto($dados)
+    public function formarObjeto($dados)
     {
         return new Produto(
             $dados['id'],
@@ -33,7 +33,7 @@ class ProdutoRepositorio
         $produtosCafe = $statement->fetchAll(PDO::FETCH_ASSOC);
 
         $dadosCafe = array_map(function ($cafe){
-            return $this->formarObejto($cafe);
+            return $this->formarObjeto($cafe);
         }, $produtosCafe);
 
         return $dadosCafe;
@@ -47,9 +47,30 @@ class ProdutoRepositorio
         $produtosAlmoco = $statement->fetchAll(PDO::FETCH_ASSOC);
 
         $dadosAlmoco = array_map(function ($almoco){
-            return $this->formarObejto($almoco);
+            return $this->formarObjeto($almoco);
         }, $produtosAlmoco);
 
         return $dadosAlmoco;
+    }
+
+    public function buscarTodos()
+    {
+        $sql = "SELECT * FROM produtos ORDER BY preco";
+        $statement = $this->pdo->query($sql);
+        $dados = $statement->fetchAll(PDO::FETCH_ASSOC);
+
+        $todosDados = array_map(function ($produto){
+            return $this->formarObjeto($produto);
+        }, $dados);
+
+        return $todosDados;
+    }
+
+    public function excluirProduto(int $id): void
+    {
+        $sql = "DELETE FROM produtos WHERE id = ?";
+        $statement = $this->pdo->prepare($sql);
+        $statement->bindValue(1, $id);
+        $statement->execute();
     }
 }

@@ -1,6 +1,5 @@
 <?php
 
-use Modelo\Produto;
 use Repositorio\ProdutoRepositorio;
 
 require 'src/conexao-bd.php';
